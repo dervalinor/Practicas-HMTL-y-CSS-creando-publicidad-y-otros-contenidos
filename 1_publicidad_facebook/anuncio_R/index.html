@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análisis de Datos en R</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --secondary: #7c3aed;
+            --accent: #f59e0b;
+            --text: #1f2937;
+            --background: #f3f4f6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+        }
+
+        body {
+            background-color: var(--background);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--primary), v<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análisis de Datos en R</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --secondary: #7c3aed;
+            --accent: #f59e0b;
+            --text: #1f2937;
+            --background: #f3f4f6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+        }
+
+        body {
+            background-color: var(--background);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 3rem 2rem;
+            border-radius: 1rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            opacity: 0;
+        }
+
+        .price-tag {
+            background-color: var(--accent);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 2rem;
+            display: inline-block;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 1rem 0;
+            transform: scale(0);
+        }
+
+        .benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .benefit-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transform: translateY(50px);
+            opacity: 0;
+        }
+
+        .benefit-card h3 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .cta-button {
+            background-color: var(--accent);
+            color: white;
+            text-decoration: none;
+            padding: 1rem 2rem;
+            border-radius: 0.5rem;
+            display: inline-block;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+        }
+
+        .highlight {
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        .emoji {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+    </style>
+</head>
+<body>
+    <!--Falta centrar la div donde estan la caracteristicas del anuncion y colocar el numeor completo de WhatsAp-->
+    <div class="container">
+        <div class="hero">
+            <div class="emoji">📊</div>
+            <h1>Análisis de Datos en R</h1>
+            <p>Transforma tus datos en resultados profesionales</p>
+            <div class="price-tag pulse">
+                ¡Solo $30,000 COP!
+            </div>
+        </div>
+
+        <div class="benefits">
+            <div class="benefit-card">
+                <h3>✨ Análisis Profesional</h3>
+                <p>Obtén resultados precisos y confiables para tu investigación</p>
+            </div>
+            <div class="benefit-card">
+                <h3>⚡ Rápido y Eficiente</h3>
+                <p>Ahorra tiempo valioso en el análisis de tus datos</p>
+            </div>
+            <div class="benefit-card">
+                <h3>💰 Precio Accesible</h3>
+                <p>Calidad profesional a un precio estudiantil</p>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin: 2rem 0;">
+            <h2>¿Qué incluye?</h2>
+            <ul style="list-style: none; margin: 1rem 0;">
+                <li>✓ Análisis descriptivos completos</li>
+                <li>✓ Gráficos personalizados</li>
+                <li>✓ Correlaciones estadísticas</li>
+                <li>✓ Reporte detallado</li>
+            </ul>
+            <a href="https://wa.me/573244733015" class="cta-button">
+                Contactar por WhatsApp 📱
+            </a>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            gsap.to('.hero', {
+                opacity: 1,
+                duration: 1,
+                ease: 'power2.out'
+            });
+
+            gsap.to('.price-tag', {
+                scale: 1,
+                duration: 0.8,
+                delay: 0.5,
+                ease: 'back.out'
+            });
+
+            gsap.to('.benefit-card', {
+                opacity: 1,
+                y: 0,
+                duration: 0.8,
+                stagger: 0.2,
+                ease: 'power2.out',
+                delay: 1
+            });
+
+            // Intersection Observer para animaciones al hacer scroll
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.transform = 'translateY(0)';
+                        entry.target.style.opacity = '1';
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            document.querySelectorAll('.benefit-card').forEach(card => {
+                observer.observe(card);
+            });
+        });
+    </script>
+</body>
+</html>ar(--secondary));
+            color: white;
+            padding: 3rem 2rem;
+            border-radius: 1rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            opacity: 0;
+        }
+
+        .price-tag {
+            background-color: var(--accent);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 2rem;
+            display: inline-block;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 1rem 0;
+            transform: scale(0);
+        }
+
+        .benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .benefit-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transform: translateY(50px);
+            opacity: 0;
+        }
+
+        .benefit-card h3 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .cta-button {
+            background-color: var(--accent);
+            color: white;
+            text-decoration: none;
+            padding: 1rem 2rem;
+            border-radius: 0.5rem;
+            display: inline-block;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+        }
+
+        .highlight {
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        .emoji {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hero">
+            <div class="emoji">📊</div>
+            <h1>Análisis de Datos en R</h1>
+            <p>Transforma tus datos en resultados profesionales</p>
+            <div class="price-tag pulse">
+                ¡Solo $30,000 COP!
+            </div>
+        </div>
+
+        <div class="benefits">
+            <div class="benefit-card">
+                <h3>✨ Análisis Profesional</h3>
+                <p>Obtén resultados precisos y confiables para tu investigación</p>
+            </div>
+            <div class="benefit-card">
+                <h3>⚡ Rápido y Eficiente</h3>
+                <p>Ahorra tiempo valioso en el análisis de tus datos</p>
+            </div>
+            <div class="benefit-card">
+                <h3>💰 Precio Accesible</h3>
+                <p>Calidad profesional a un precio estudiantil</p>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin: 2rem 0;">
+            <h2>¿Qué incluye?</h2>
+            <ul style="list-style: none; margin: 1rem 0;">
+                <li>✓ Análisis descriptivos completos</li>
+                <li>✓ Gráficos personalizados</li>
+                <li>✓ Correlaciones estadísticas</li>
+                <li>✓ Reporte detallado</li>
+            </ul>
+            <a href="https://wa.me/573244733015" class="cta-button">
+                Contactar por WhatsApp 📱
+            </a>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            gsap.to('.hero', {
+                opacity: 1,
+                duration: 1,
+                ease: 'power2.out'
+            });
+
+            gsap.to('.price-tag', {
+                scale: 1,
+                duration: 0.8,
+                delay: 0.5,
+                ease: 'back.out'
+            });
+
+            gsap.to('.benefit-card', {
+                opacity: 1,
+                y: 0,
+                duration: 0.8,
+                stagger: 0.2,
+                ease: 'power2.out',
+                delay: 1
+            });
+
+            // Intersection Observer para animaciones al hacer scroll
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.transform = 'translateY(0)';
+                        entry.target.style.opacity = '1';
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            document.querySelectorAll('.benefit-card').forEach(card => {
+                observer.observe(card);
+            });
+        });
+    </script>
+</body>
+</html>
